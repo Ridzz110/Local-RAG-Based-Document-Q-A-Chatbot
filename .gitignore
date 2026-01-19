@@ -1,3 +1,4 @@
 vector_store/
+data/docs/*
 venv/
 .gradio/

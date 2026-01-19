@@ -13,12 +13,11 @@ UPLOAD_DIR = "data/docs"
 
 def list_uploaded_docs():
     if not os.path.exists(UPLOAD_DIR):
-        return "### 📂 Uploaded Documents\n_No documents uploaded yet_"
-
+        os.makedirs(UPLOAD_DIR, exist_ok=True)
+        return "Uploaded Documents\n_No documents uploaded yet_"
     files = sorted(os.listdir(UPLOAD_DIR))
     if not files:
-        return "### 📂 Uploaded Documents\n_No documents uploaded yet_"
-
+        return "Uploaded Documents\n_No documents uploaded yet_"
     md = "### 📂 Uploaded Documents\n"
     for f in files:
         md += f"- 📄 **{f}**\n"
@@ -26,7 +25,6 @@ def list_uploaded_docs():
 
 
 # Initialization
-os.makedirs(UPLOAD_DIR, exist_ok=True)
 embedding_model = load_embedding_model()
 
 
