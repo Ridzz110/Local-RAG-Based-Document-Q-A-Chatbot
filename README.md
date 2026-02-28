@@ -2,7 +2,7 @@
 title: Local RAG Document Q&A Chatbot
 emoji: 📄
 colorFrom: green
-colorTo: teal
+colorTo: pink
 sdk: gradio
 sdk_version: "6.2.0"
 app_file: src/app.py
