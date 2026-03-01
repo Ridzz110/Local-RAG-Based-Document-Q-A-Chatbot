@@ -1,6 +1,6 @@
 vector_store/
 data/docs/*
-venv/
+new-venv/
 .gradio/
 logs/
 .env
